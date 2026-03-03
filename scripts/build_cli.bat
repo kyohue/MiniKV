@@ -4,9 +4,16 @@ REM Mini-KV CLI 交互式界面编译脚本 (Windows)
 REM [解决方案]: 设置终端编码为 UTF-8，解决中文乱码问题
 chcp 65001 >nul
 
+REM 获取脚本所在目录的父目录（项目根目录）
+set "SCRIPT_DIR=%~dp0"
+set "PROJECT_ROOT=%SCRIPT_DIR%.."
+cd /d "%PROJECT_ROOT%"
+
 echo ========================================
 echo   Mini-KV CLI 交互式界面编译
 echo ========================================
+echo 项目根目录: %CD%
+echo.
 
 REM 检查 g++ 是否安装
 where g++ >nul 2>nul

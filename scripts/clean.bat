@@ -3,9 +3,15 @@ REM Mini-KV 清理脚本 (Windows)
 
 chcp 65001 >nul
 
+REM 获取脚本所在目录的父目录（项目根目录）
+set "SCRIPT_DIR=%~dp0"
+set "PROJECT_ROOT=%SCRIPT_DIR%.."
+cd /d "%PROJECT_ROOT%"
+
 echo ========================================
 echo   Mini-KV 清理脚本
 echo ========================================
+echo 项目根目录: %CD%
 echo.
 
 echo 正在清理构建产物...
